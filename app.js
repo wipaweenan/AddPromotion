@@ -5,9 +5,10 @@ function sendName() {
 }
 
 clearName = ()  =>{
-    console.log(document.getElementsByClassName('Name')[1])
+    console.log(document.getElementsByClassName("Name")[1])
     console.log(document.getElementById('pro').value);
+    document.getElementsByClassName("Name")[1].innerHTML = ''
     document.getElementById('pro').value = ''
-    document.getElementsByClassName('Name')[1].innerHTML = ''
+    
     
 }
