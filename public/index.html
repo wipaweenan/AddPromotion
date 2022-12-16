@@ -31,7 +31,7 @@
                         <form action="/api/add" method="post" enctype="multipart/form-data">    
                         <div class="infonamePro">
                             <label class="text">ชื่อโฆษณา : </label>
-                            <input placeholder="Promotiontest" class="Name" id="pro" type="text" name="name" value="">
+                            <input required placeholder="Promotiontest" class="Name" id="pro" type="text" name="name" value="">
                         </div>
                         <div class="infonamePro">
                             <label class="text">ไฟล์ : </label>
@@ -47,9 +47,9 @@
                 <div class="infostatus">
                     <div class="status"><label class="text">สถานะ : </label> </div>
                 
-                <div class="status"><input type="radio" name="ko" value=1 ><label for="#">ใช้งาน</label> </div>
+                <div class="status"><input required type="radio" name="ko" value=1 ><label for="#">ใช้งาน</label> </div>
             
-            <div class="status"><input type="radio" name="ko" value=0 ><label for="#">ไม่ใช้งาน</label> </div>
+            <div class="status"><input required type="radio" name="ko" value=0 ><label for="#">ไม่ใช้งาน</label> </div>
         </div>
         </div>
     </div>
