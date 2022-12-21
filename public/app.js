@@ -4,6 +4,8 @@ function sendName() {
     document.getElementsByClassName("Name")[1].innerHTML = file;
 }
 
+
+
 function validateData() {
     let adsName = document.getElementById('pro').value;
     if (adsName === "") {
@@ -70,42 +72,49 @@ window.alert = function (message) {
     const alertButton = document.createElement('button');
 
     alertButton.innerText ='OK';
+    alertButton.classList.add('alertButton');
     alert.classList.add('alert');
-    alert.setAttribute('style', `
-        background-color: #fff;
-        position: fixed;
-        top: 140px;
-        left: 45%;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 2p 10px 5px 0 #00000022;
-        display: flex;
-        flex-direction:column; 
-        border: 1px 
-        border: solid ;
-        border-color: #62B6B7;
+    alert.classList.add('none');    
+
+    // alert.setAttribute('style', `
+    //     background-color: #fff;
+    //     position: fixed;
+    //     top: 140px;
+    //     left: 45%;
+    //     padding: 20px;
+    //     border-radius: 10px;
+    //     box-shadow: 2p 10px 5px 0 #00000022;
+    //     display: flex;
+    //     flex-direction:column; 
+    //     border: 1px 
+    //     border: solid ;
+    //     border-color: #62B6B7;
         
-    `);
+    // `);
 
-    alertButton.setAttribute('style',`
-        border: 1px  
-        border: solid ;
-        border-color: #62B6B7;
-        background: white;
-        border-radius: 5px;
-        padding: 5px;
-        transition: 0.4s;
+    // alertButton.setAttribute('style',`
+    //     border: 1px  
+    //     border: solid ;
+    //     border-color: #62B6B7;
+    //     background: white;
+    //     border-radius: 5px;
+    //     padding: 5px;
+    //     transition: 0.4s;
 
-    `);
+    // `);
     
 
     alert.innerHTML = `<span style="padding: 10px">${message}</span>`;
     alert.appendChild(alertButton);
     document.body.appendChild(alert);
+    setTimeout(function(){ alert.classList.remove('none') }, 400);
     alertButton.addEventListener('click',(e)=>{
-            alert.remove();
+        alert.classList.add('none')
+        setTimeout(function(){ alert.remove(); }, 400);
+            // 
     });
 }
+
 
 
 clearName = () => {
