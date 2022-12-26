@@ -3,7 +3,22 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+.navbar{
+    background-color: #4FB783;
+    
+}
+.navbar-brand:hover, .nav-link:hover {
+    color: #FFF7BC;
+}
+.navbar-brand{
+    color: #1A4D2E;
+    font-weight: bold;
+    transition: 0.2s;
+}
+.nav-link{
+    color: #1A4D2E;
+    transition: 0.2s;
+}
 body {
     text-align: center;
     font-family: 'Bai Jamjuree', sans-serif;
@@ -18,12 +33,12 @@ h3 {
 
 .main {
     background-color: #4FB783 ;
-    width: 50%;
+    max-width: 45rem;
     min-height: 25rem;
     margin: 2.5rem auto;
     border-radius: 25px;
     padding: 0.5%;
-    transition: 0.4s;
+    /* transition: 0.4s; */
 }
 
 .Name {
@@ -54,7 +69,7 @@ h3 {
     margin-top: 1rem;
     display: grid;
     text-align: right;
-    grid-template-columns: 17% 12% 12%;
+    grid-template-columns: 8rem 8rem 8rem;
 }
 .btn {
     margin-left: 1rem;
@@ -84,60 +99,22 @@ h3 {
     margin-left: 7rem;
 }
 
-/* this popup */
-.popup{
-    position: relative;
-    margin: 5rem auto;
-    padding: 1.5rem;
-    background: #fff;
-    border-radius: 1rem;
-    width: 25rem;
-    transition: all .4s ease-in-out;
-    display: grid;
-    grid-template-columns: auto auto;
-}
-.popup h3{
-    color: #FF4949;
-    font-size: 1.5rem;
-}
-.popup .close{
-    right: 1rem;
-    top: 1rem;
-    position: absolute;
-    transition:  all 400ms;
-    font-size: 2rem;
-    font-weight: bold;
-    text-decoration: none  ;
-    color: black;
 
-}
-.error{
-    color: #FF4949;
-}
 
-#confirm {
-    display: none;
-    border: 1px solid;
-    position: fixed;
-    width: 250px;
-    left: 50%;
-    margin-left: -100px;
-    padding: 25px;
-    text-align: center;
- }  
  .img{
-    /* scale: 90%; */
-    /* padding-bottom: 2rem; */
-    text-align: center;
+    position: fixed;
+    /* text-align: center; */
     width: 25rem;
     height: 17rem;
+    right: 50%;
+    translate: 50%; /*ย้ายจุดกึ่งกลาง*/
  }
 .logo{
     position: fixed;
     width: 3.5rem;
     height: 2rem;
     left: 1rem;
-    top: 1rem;
+    top: 4rem;
 }
 
 .alert{
@@ -180,3 +157,24 @@ h3 {
     background-size: contain;
     background-position: center; */
 }
+/* @media screen and (min-width: 601px) and (max-width: 992px) {
+    .main {
+      width: 40%;
+      margin: 0 auto;
+    }
+  } */
+
+  ::-webkit-scrollbar-thumb {
+    background: none;
+    border: .2rem dashed #4FB783;
+    /* border-radius: 10px; */
+  }
+
+  ::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  ::-webkit-scrollbar-track {
+
+   background: none;
+  }

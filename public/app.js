@@ -15,11 +15,11 @@ function validateData() {
         console.log('validate data');
         const files = document.getElementById("files").files;
         if (files.length === 0) {
-            alert("กรุณาเลือกไฟล์ !!!");
+            alert("กรุณาเลือกไฟล์ !!");
         } else {
-            const filename = files[0].name;
-            if (filename === "") {
-                alert("กรุณากรอกชื่อโปรโมชั่น !!!");
+            let enable = getEnableCheckboxValue();
+            if (enable === undefined || enable === -1) {
+                alert("กรุณาโปรดเลือกชื่อสถานะ !!");
             } else {
                 saveData();
             }
@@ -39,7 +39,7 @@ function saveData() {
     formData.append('enable', enable);
     formData.append('adsName', adsName);
 
-    fetch('http://localhost:3000/api/add', {
+    fetch('/api/add', {
         method: 'POST',
         body: formData
     })
@@ -54,6 +54,7 @@ function saveData() {
 }
 
 function getEnableCheckboxValue() {
+    
     var radios = document.getElementsByName('ko');
 
     for (var i = 0, length = radios.length; i < length; i++) {
