@@ -4,7 +4,7 @@ console.log('เข้ามาแล้วจ้า');
 
 const Filefilter = (req,file,cb)=>{
     
-    if (file.originalname.endsWith('.png')||file.originalname.endsWith('.mp4')){
+    if (file.originalname.endsWith('.png')||file.originalname.endsWith('.mp4')||file.originalname.endsWith('.jpg')){
         cb(null,true)
     }else{
         cb("Please upload File", false)
